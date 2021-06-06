@@ -1,0 +1,119 @@
+Algoritmo RESERVADEAVIONESCESSNA208
+	//SE DEFINEN LAS VARIABLES//
+	definir a,reser como cadena; 
+	definir b,n Como Entero;
+	definir entrada como Entero;
+	dimension a(10000,10000) //SE PLASMA LA DIMENSIÓN DE LA MATRÍZ//
+	
+	
+	
+	Repetir //UTILIZO EL COMANDO REPETIR, PARA QUE SIEMPRE QUE EJECUTE LAS OPCIONES A CONTINUACIÓN, VUELVA AL MENÚ DE OPCIONES.//
+		Escribir '         A E R O V A N S - SAS      '
+		Escribir '  ****SU AEROLINEA DE CONFIANZA**** '
+		Escribir 'SISTEMA DE ADMINISTRACION DE VUELOS - ****SIAVU****'
+		Escribir 'FLOTILLA DE AEROPLANOS CESSNA - 208'
+		Escribir "------------------------------------------------"
+		Escribir '-------------MENU PRINCIPAL---------------------'
+		Escribir "------------------------------------------------"//ESTAS LINEAS, SE UTILIZAN, CON EL FIN DE QUE SE VEA ESTETICO EL PROGRAMA A LA HORA DE EJECUTARSE.//
+		Escribir 'PRESIONE EL NUMERO ADECUADO SEGUN LAS OPCIONES:'
+		Escribir '1.RESERVAR CUPO'
+		Escribir '2.CANCELAR RESERVA'
+		Escribir '3.CONFIRMAR RESERVA'
+		Escribir '4.CERRAR VUELO'
+        Leer entrada;	
+		
+		//ACONTINUACIÓN, SE INSERTARÁ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCIÓN No. 1//
+		Si entrada=1 Entonces
+			Escribir Sin saltar "¿CUANTAS RESERVAS DESEA REALIZAR?"
+			Leer n //COMO "N" FUE DEFINIDA COMO NUMERO ENTERO, DONDE SE SE PUEDE ALMACENAR CUALQUIER CANTIDAD DE DATOS.//
+			para b<-1 hasta n con paso 1 Hacer //SE ACOMPAÑA DE UN CICLO "PARA"//
+				Escribir "RESERVA ------- ", b;
+				Escribir "POR FAVOR: DIGITE SU NUMERO DE IDENTIFICACIÓN"
+				leer a(b,1);
+				Escribir "POR FAVOR: DIGITE EL NOMBRE Y APELLIDO"
+				Leer a(b,2);
+				Escribir "POR FAVOR: DIGITE LA CIUDAD DE ORIGEN"
+				Leer a(b,3);
+				Escribir "POR FAVOR: DIGITE LA CIUDAD DE DESTINO"
+				Leer a(b,4);
+				Escribir "POR FAVOR: DIGITE LA FECHA DE SALIDA"
+				leer a(b,5);
+				Escribir "POR FAVOR: DIGITE LA HORA DE SALIDA"
+				Leer a(b,6);
+				Escribir "POR FAVOR: DIGITE LA FILA EN EL AEROPLANO"
+				Leer a(b,7);
+				Escribir "POR FAVOR: DIGITE EL ASIENTO EN EL AEROPLANO"
+				Leer a(b,8);
+				Escribir "¡LOS DATOS FUERON INSERTADOS CORRECTAMENTE!"
+			FinPara
+		Fin Si
+		
+		
+		//ACONTINUACIÓN, SE INSERTARÁ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCIÓN No. 2//
+		Si entrada=2 Entonces
+			Para b<-1 Hasta n Con Paso 1 Hacer //SE ACOMPAÑA DE UN CICLO "PARA"//
+				Escribir 'POR FAVOR:DIGITE SU NUMERO DE IDENTIFICACIÓN'
+				leer a(b,1);
+				Escribir 'POR FAVOR: DIGITE EL NUMERO DE FILA DEL AEROPLANO'
+				Leer a(b,6);
+				Escribir 'POR FAVOR: DIGITE EL NUMERO DE ASIENTO'
+				Leer a(b,7);
+				Escribir '¿DESEA CANCELAR LA RESERVA? / PRESIONE LA TECLA  1'
+				Esperar Tecla
+				Escribir '- ¡ATENCIÓN! - ¡LA RESERVA HA SIDO CANCELADA!'
+				Escribir ' LA RESERVA QUEDA DISPONIBLE '
+				Escribir '***RESERVA EN ESTADO (0)***'
+			Fin Para
+		Fin Si
+		
+		//ACONTINUACIÓN, SE INSERTARÁ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCIÓN No. 3//
+		Si Entrada=3 Entonces
+			Para b<-n Hasta 1 Con Paso -1 Hacer //SE ACOMPAÑA DE UN CICLO "PARA", CON EL FIN DE QUE EJECUTE UNOS DATOS ALMACENADOS EN LA MEMORIA TEMPORAL DEL COMPUTADOR//
+				Escribir 'POR FAVOR: DIGITE EL NUMERO DE IDENTIFICACIÓN'
+				leer a(b,1);
+				Escribir '¿DESEA CONFIRMAR LA RESERVA? / PRESIONE LA TECLA 2'
+				Esperar Tecla
+				Escribir '¡LA RESERVA HA SIDO CONFIRMADA!'
+				Escribir '***RESERVA EN ESTADO (2)***'
+				Esperar 4 segundos
+			Fin Para
+		Fin Si
+		
+		
+		//ACONTINUACIÓN, SE INSERTARÁ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCIÓN No. 4//
+		Si entrada=4 Entonces
+			Para b<-n Hasta 1 Con Paso -1 Hacer //SE ACOMPAÑA DE UN CICLO "PARA"//
+				Escribir '- ¡ATENCIÓN! - '
+				Escribir 'SE CIERRA EL VUELO, POR QUE EL AEROPLANO INICIA EL PROCEDIMIENTO DE DESPEGUE'
+				Escribir 'SEÑOR(A) OPERADOR(A) DEL APLICATIVO: SE MOSTRARÁ LOS DATOS DE LOS/LAS CIUDADANOS/AS, QUE TOMARÁN EL VUELO:'
+				Escribir "----------------------------------------------------------------------------------------------------------"
+				Escribir "PASAJERO No." ,b;
+				Escribir 'IDENTIFICACION:'
+				Escribir a(b,1);
+				Escribir 'NOMBRES Y APELLIDOS:'
+				Escribir a(b,2);
+				Escribir 'CIUDAD ORIGEN:'
+				Escribir a(b,3);
+				Escribir 'CIUDAD DE DESTINO:'
+				Escribir a(b,4);
+				Escribir 'FECHA DE SALIDA:'
+				Escribir a(b,5);
+				Escribir 'HORA DE SALIDA:'
+				Escribir a(b,6);
+				Escribir 'FILA EN EL AVIÓN:'
+				Escribir a(b,7);
+				Escribir 'ASIENTO QUE OCUPARÁ:'
+				Escribir a(b,8);
+				Escribir "----------------------------------------------------------------------------------------------------------"
+				Escribir '¡SE COMPLETA EL PROCEDIMIENTO DE RESERVA!'
+				Escribir 'GRACIAS POR UTILIZAR LOS SERVICIOS DE ***A E R O V A N S***'
+				Escribir 'VISITENOS EN NUESTRA WEB: https//:www.aerovans.com.co  Y NUESTRAS REDES SOCIALES.'
+				// LA LINEA ANTERIOR, SE EXPONE UN NOMBRE DE UNA  EMPRESA TOTALMENTE FICTICIA
+				Escribir '(c) 2019 - TODOS LOS DERECHOS DE DOCUMENTA S.A '
+				Escribir 'SOFTWARE ELABORADO POR @WagnerFer'
+			Fin Para
+		Fin Si
+		
+		
+	Hasta Que reser="n"
+FinAlgoritmo

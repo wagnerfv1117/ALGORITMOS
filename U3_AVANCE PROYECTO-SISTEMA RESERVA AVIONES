@@ -3,11 +3,11 @@ Algoritmo RESERVADEAVIONESCESSNA208
 	definir a,reser como cadena; 
 	definir b,n Como Entero;
 	definir entrada como Entero;
-	dimension a(10000,10000) //SE PLASMA LA DIMENSI”N DE LA MATRÕZ//
+	dimension a(10000,10000) //SE PLASMA LA DIMENSI√ìN DE LA MATR√çZ//
 	
 	
 	
-	Repetir //UTILIZO EL COMANDO REPETIR, PARA QUE SIEMPRE QUE EJECUTE LAS OPCIONES A CONTINUACI”N, VUELVA AL MEN⁄ DE OPCIONES.//
+	Repetir //UTILIZO EL COMANDO REPETIR, PARA QUE SIEMPRE QUE EJECUTE LAS OPCIONES A CONTINUACI√ìN, VUELVA AL MEN√ö DE OPCIONES.//
 		Escribir '         A E R O V A N S - SAS      '
 		Escribir '  ****SU AEROLINEA DE CONFIANZA**** '
 		Escribir 'SISTEMA DE ADMINISTRACION DE VUELOS - ****SIAVU****'
@@ -22,13 +22,13 @@ Algoritmo RESERVADEAVIONESCESSNA208
 		Escribir '4.CERRAR VUELO'
         Leer entrada;	
 		
-		//ACONTINUACI”N, SE INSERTAR¡ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI”N No. 1//
+		//ACONTINUACI√ìN, SE INSERTAR√Å EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI√ìN No. 1//
 		Si entrada=1 Entonces
-			Escribir Sin saltar "øCUANTAS RESERVAS DESEA REALIZAR?"
+			Escribir Sin saltar "¬øCUANTAS RESERVAS DESEA REALIZAR?"
 			Leer n //COMO "N" FUE DEFINIDA COMO NUMERO ENTERO, DONDE SE SE PUEDE ALMACENAR CUALQUIER CANTIDAD DE DATOS.//
-			para b<-1 hasta n con paso 1 Hacer //SE ACOMPA—A DE UN CICLO "PARA"//
+			para b<-1 hasta n con paso 1 Hacer //SE ACOMPA√ëA DE UN CICLO "PARA"//
 				Escribir "RESERVA ------- ", b;
-				Escribir "POR FAVOR: DIGITE SU NUMERO DE IDENTIFICACI”N"
+				Escribir "POR FAVOR: DIGITE SU NUMERO DE IDENTIFICACI√ìN"
 				leer a(b,1);
 				Escribir "POR FAVOR: DIGITE EL NOMBRE Y APELLIDO"
 				Leer a(b,2);
@@ -44,48 +44,48 @@ Algoritmo RESERVADEAVIONESCESSNA208
 				Leer a(b,7);
 				Escribir "POR FAVOR: DIGITE EL ASIENTO EN EL AEROPLANO"
 				Leer a(b,8);
-				Escribir "°LOS DATOS FUERON INSERTADOS CORRECTAMENTE!"
+				Escribir "¬°LOS DATOS FUERON INSERTADOS CORRECTAMENTE!"
 			FinPara
 		Fin Si
 		
 		
-		//ACONTINUACI”N, SE INSERTAR¡ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI”N No. 2//
+		//ACONTINUACI√ìN, SE INSERTAR√Å EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI√ìN No. 2//
 		Si entrada=2 Entonces
-			Para b<-1 Hasta n Con Paso 1 Hacer //SE ACOMPA—A DE UN CICLO "PARA"//
-				Escribir 'POR FAVOR:DIGITE SU NUMERO DE IDENTIFICACI”N'
+			Para b<-1 Hasta n Con Paso 1 Hacer //SE ACOMPA√ëA DE UN CICLO "PARA"//
+				Escribir 'POR FAVOR:DIGITE SU NUMERO DE IDENTIFICACI√ìN'
 				leer a(b,1);
 				Escribir 'POR FAVOR: DIGITE EL NUMERO DE FILA DEL AEROPLANO'
 				Leer a(b,6);
 				Escribir 'POR FAVOR: DIGITE EL NUMERO DE ASIENTO'
 				Leer a(b,7);
-				Escribir 'øDESEA CANCELAR LA RESERVA? / PRESIONE LA TECLA  1'
+				Escribir '¬øDESEA CANCELAR LA RESERVA? / PRESIONE LA TECLA  1'
 				Esperar Tecla
-				Escribir '- °ATENCI”N! - °LA RESERVA HA SIDO CANCELADA!'
+				Escribir '- ¬°ATENCI√ìN! - ¬°LA RESERVA HA SIDO CANCELADA!'
 				Escribir ' LA RESERVA QUEDA DISPONIBLE '
 				Escribir '***RESERVA EN ESTADO (0)***'
 			Fin Para
 		Fin Si
 		
-		//ACONTINUACI”N, SE INSERTAR¡ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI”N No. 3//
+		//ACONTINUACI√ìN, SE INSERTAR√Å EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI√ìN No. 3//
 		Si Entrada=3 Entonces
-			Para b<-n Hasta 1 Con Paso -1 Hacer //SE ACOMPA—A DE UN CICLO "PARA", CON EL FIN DE QUE EJECUTE UNOS DATOS ALMACENADOS EN LA MEMORIA TEMPORAL DEL COMPUTADOR//
-				Escribir 'POR FAVOR: DIGITE EL NUMERO DE IDENTIFICACI”N'
+			Para b<-n Hasta 1 Con Paso -1 Hacer //SE ACOMPA√ëA DE UN CICLO "PARA", CON EL FIN DE QUE EJECUTE UNOS DATOS ALMACENADOS EN LA MEMORIA TEMPORAL DEL COMPUTADOR//
+				Escribir 'POR FAVOR: DIGITE EL NUMERO DE IDENTIFICACI√ìN'
 				leer a(b,1);
-				Escribir 'øDESEA CONFIRMAR LA RESERVA? / PRESIONE LA TECLA 2'
+				Escribir '¬øDESEA CONFIRMAR LA RESERVA? / PRESIONE LA TECLA 2'
 				Esperar Tecla
-				Escribir '°LA RESERVA HA SIDO CONFIRMADA!'
+				Escribir '¬°LA RESERVA HA SIDO CONFIRMADA!'
 				Escribir '***RESERVA EN ESTADO (2)***'
 				Esperar 4 segundos
 			Fin Para
 		Fin Si
 		
 		
-		//ACONTINUACI”N, SE INSERTAR¡ EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI”N No. 4//
+		//ACONTINUACI√ìN, SE INSERTAR√Å EL COMANDO "SI - ENTONCES". PARA QUE SE EJECUTE LA OPCI√ìN No. 4//
 		Si entrada=4 Entonces
-			Para b<-n Hasta 1 Con Paso -1 Hacer //SE ACOMPA—A DE UN CICLO "PARA"//
-				Escribir '- °ATENCI”N! - '
+			Para b<-n Hasta 1 Con Paso -1 Hacer //SE ACOMPA√ëA DE UN CICLO "PARA"//
+				Escribir '- ¬°ATENCI√ìN! - '
 				Escribir 'SE CIERRA EL VUELO, POR QUE EL AEROPLANO INICIA EL PROCEDIMIENTO DE DESPEGUE'
-				Escribir 'SE—OR(A) OPERADOR(A) DEL APLICATIVO: SE MOSTRAR¡ LOS DATOS DE LOS/LAS CIUDADANOS/AS, QUE TOMAR¡N EL VUELO:'
+				Escribir 'SE√ëOR(A) OPERADOR(A) DEL APLICATIVO: SE MOSTRAR√Å LOS DATOS DE LOS/LAS CIUDADANOS/AS, QUE TOMAR√ÅN EL VUELO:'
 				Escribir "----------------------------------------------------------------------------------------------------------"
 				Escribir "PASAJERO No." ,b;
 				Escribir 'IDENTIFICACION:'
@@ -100,12 +100,12 @@ Algoritmo RESERVADEAVIONESCESSNA208
 				Escribir a(b,5);
 				Escribir 'HORA DE SALIDA:'
 				Escribir a(b,6);
-				Escribir 'FILA EN EL AVI”N:'
+				Escribir 'FILA EN EL AVI√ìN:'
 				Escribir a(b,7);
-				Escribir 'ASIENTO QUE OCUPAR¡:'
+				Escribir 'ASIENTO QUE OCUPAR√Å:'
 				Escribir a(b,8);
 				Escribir "----------------------------------------------------------------------------------------------------------"
-				Escribir '°SE COMPLETA EL PROCEDIMIENTO DE RESERVA!'
+				Escribir '¬°SE COMPLETA EL PROCEDIMIENTO DE RESERVA!'
 				Escribir 'GRACIAS POR UTILIZAR LOS SERVICIOS DE ***A E R O V A N S***'
 				Escribir 'VISITENOS EN NUESTRA WEB: https//:www.aerovans.com.co  Y NUESTRAS REDES SOCIALES.'
 				// LA LINEA ANTERIOR, SE EXPONE UN NOMBRE DE UNA  EMPRESA TOTALMENTE FICTICIA
